@@ -1,9 +1,14 @@
+<?php
+
+require_once "middleware.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make notes/Adddiary</title>
+    <title> <?php echo isset($title) ? $title : 'Jatdown | Home'; ?> </title>
     <style>
         body {
             font-family: 'Caveat', cursive;
@@ -147,44 +152,15 @@
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="DiaryPage.php">My Notes</a>
+        <a href="Directpage.php">My Notes</a>
         <a href="adddiary.html">Make Notes</a>
-        <a href="#">My Schedule</a>
+        <a href="schedule.php">My Schedule</a>
         <a href="#">Done Works</a>
-        <a href="#">Themes</a>
+        <a href="logout.php">Log out</a>
+
     </div>
 
     <div id="main">
         <h2>Jatdown</h2>
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-        
         <div class="notepad">
-            <form id="diaryForm" action="diary.php" method="post">
-               
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
-            
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
-            
-                <label for="entry">Diary:</label>
-                <textarea id="entry" name="entry" rows="8" required></textarea>
-            
-                <button type="submit">Save</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft= "0";
-        }
-    </script>
-</body>
-</html>
