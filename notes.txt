@@ -2,4 +2,4 @@ login
     first create table users
     
 
-enable extension=gd in php.ini to activate image creation library - enable
+enable extension=gd in php.ini to activate image creation library
