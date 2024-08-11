@@ -1,1 +1,2 @@
 
+this is for sql queries or command execution
